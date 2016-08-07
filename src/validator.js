@@ -5,6 +5,7 @@ module.exports = class Validator {
   constructor(schema) {
     const ajv = new Ajv({ allErrors: true });
     this.validator = ajv.compile(schema);
+    this.schema = schema;
   }
 
   validate(data) {
