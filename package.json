@@ -1,6 +1,6 @@
 {
   "name": "express-json-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSON schema based validation middleware for express",
   "main": "src/index.js",
   "scripts": {
