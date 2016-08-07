@@ -23,6 +23,6 @@ module.exports = class Validator {
       const text = keyword === 'required' ? 'is required' : message.replace('should', 'must');
 
       return `'${path.replace(/^\./, '')}' ${text}`;
-    }).join('\n');
+    }).join(', ');
   }
 };
