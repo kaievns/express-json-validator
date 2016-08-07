@@ -20,9 +20,8 @@ module.exports = class Validator {
       const { dataPath, message, keyword, params: {missingProperty} } = error;
       const path = keyword === 'required' ? dataPath + `.${missingProperty}` : dataPath;
       const text = keyword === 'required' ? 'is required' : message.replace('should', 'must');
-      const name = path.replace(/^\./, '').replace(/\.([^\.]+)/g, '[$1]');
 
-      return `${name} ${text}`;
+      return `'${path.replace(/^\./, '')}' ${text}`;
     }).join('\n');
   }
 };

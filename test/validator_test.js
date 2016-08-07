@@ -32,10 +32,10 @@ describe('Validator', () => {
     it('fails when called with invalid data', () => {
       expect(() => validator.validate(BAD_DATA)).to.throw(
         ValidationError,
-        'name must NOT be longer than 8 characters\n'+
-        'info[age] must be <= 100\n'+
-        'info[name][first] is required\n'+
-        'info[name][last] must be string'
+        "'name' must NOT be longer than 8 characters\n"+
+        "'info.age' must be <= 100\n"+
+        "'info.name.first' is required\n"+
+        "'info.name.last' must be string"
       );
     });
 
